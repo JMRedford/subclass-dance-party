@@ -3,11 +3,16 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color: black;
+  background-image: url('mkarena.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: red;
+  font-family: sans-serif;
 }
 .title, .addDancerButton, .addLineUpButton {
   padding:5px 12px;
@@ -15,10 +20,10 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: black;
 }
 .title{
-  background-color: #777;
+  background-color: black;
 }
 .dancer{
   border:10px solid red;

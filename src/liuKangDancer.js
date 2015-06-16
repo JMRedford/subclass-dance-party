@@ -16,13 +16,11 @@ lkDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this);
 
-
   var styleReset = {
     top : this.top, left : this.left
 
   }
 
   this.$node.css(styleReset);
-
 
 };

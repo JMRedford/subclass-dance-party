@@ -1,6 +1,6 @@
 var WiggleDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="wiggledancer"></span>');
+  this.$node.attr('class',"wiggledancer");
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps/10;
@@ -22,7 +22,6 @@ WiggleDancer.prototype.step = function(){
 
   var styleReset = {
     top : this.top, left : this.left
-
   }
 
   this.$node.css(styleReset);

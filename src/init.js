@@ -28,17 +28,18 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+
     $('body').append(dancer.$node);
   });
+
   $(".addLineUpButton").on("click", function(event){
     lineUpAll();
   });
+
 });
 
 var lineUpAll = function () {
-  console.log(window.dancers.length);
   for (var i = 0; i < window.dancers.length; i++) {
-    console.log('lining up dancer '+i)
     window.dancers[i].lineUp()
   }
 }
