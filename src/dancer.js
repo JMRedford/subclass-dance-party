@@ -30,3 +30,15 @@ Dancer.prototype.setPosition = function(top, left){
   };
   this.$node.css(styleSettings);
 };
+
+Dancer.prototype.lineUp = function(){
+  if(this.left > 0) {
+    this.left --;
+  } else {
+    clearTimeout(this.lineTimeOutID)
+  }
+  var that = this;
+  this.lineTimeOutID = setTimeout(function () {
+    that.lineUp()
+  }, this.timeBetweenSteps);
+}

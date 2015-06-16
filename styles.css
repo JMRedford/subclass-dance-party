@@ -25,3 +25,13 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.wiggledancer{
+  border:10px solid yellow;
+  border-radius:10px;
+  position:absolute;
+}
+.tinydancer {
+  border-radius: 5px;
+  border:5px solid green;
+  position:absolute;
+}
