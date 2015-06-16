@@ -32,7 +32,7 @@ $(document).ready(function(){
   });
   $(".addLineUpButton").on("click", function(event){
     lineUpAll();
-  })
+  });
 });
 
 var lineUpAll = function () {
@@ -41,5 +41,12 @@ var lineUpAll = function () {
     console.log('lining up dancer '+i)
     window.dancers[i].lineUp()
   }
+}
+
+var moveToward = function(toMove, toMoveTo){
+  var x = toMoveTo.left - toMove.left;
+  var y = toMoveTo.top - toMove.top;
+  toMove.left = toMove.left + x/20;
+  toMove.top = toMove.top + y/20;
 }
 

@@ -4,6 +4,7 @@ var BlinkyDancer = function(top, left, timeBetweenSteps){
   this.left =  left;
   this.top = top;
   this.setPosition(this.top, this.left);
+  this.$node.mouseover(this.lineUp);//TODO fix this
 
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
