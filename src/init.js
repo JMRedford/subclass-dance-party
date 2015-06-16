@@ -17,7 +17,7 @@ $(document).ready(function(){
      * to the stage.
      */
 
-   var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
+    var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
@@ -31,12 +31,14 @@ $(document).ready(function(){
     $('body').append(dancer.$node);
   });
   $(".addLineUpButton").on("click", function(event){
-//TODO: finish this.
+    lineUpAll();
   })
 });
 
 var lineUpAll = function () {
+  console.log(window.dancers.length);
   for (var i = 0; i < window.dancers.length; i++) {
+    console.log('lining up dancer '+i)
     window.dancers[i].lineUp()
   }
 }

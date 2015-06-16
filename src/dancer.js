@@ -11,6 +11,7 @@ var Dancer = function(top, left, timeBetweenSteps){
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
   // this one sets the position to some random default point within the body
  //return this;
+  window.dancers.push(this);
 };
 
 Dancer.prototype.step = function(){
@@ -32,7 +33,7 @@ Dancer.prototype.setPosition = function(top, left){
 };
 
 Dancer.prototype.lineUp = function(){
-  if(this.left > 0) {
+  if(this.left > 15) {
     this.left --;
   } else {
     clearTimeout(this.lineTimeOutID)
@@ -40,5 +41,5 @@ Dancer.prototype.lineUp = function(){
   var that = this;
   this.lineTimeOutID = setTimeout(function () {
     that.lineUp()
-  }, this.timeBetweenSteps);
+  }, 10);
 }

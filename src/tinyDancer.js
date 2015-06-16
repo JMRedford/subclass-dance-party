@@ -15,13 +15,13 @@ TinyDancer.prototype = Object.create(Dancer.prototype);
 TinyDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this);
-  // toggle() is a jQuery method to show/hide the <span> tag.
-  // See http://api.jquery.com/category/effects/ for this and
-  // other effects you can use on a jQuery-wrapped html tag.
+
   var y = this.top + Math.sin(this.tick)*5;
   var x = this.left + Math.cos(this.tick)*5;
+
   this.tick++;
   this.tick = this.tick % 6;
+
   var styleReset = {
     top : y, left : x
   }
